@@ -35,3 +35,11 @@ export interface Card {
     color: CardColor;
     arrows: CardDirection[];
 }
+
+export type BoardCell = Card | "block" | null;
+
+export interface Game {
+    board: BoardCell[][];
+    hands: Card[][];
+    turn: number;
+}
